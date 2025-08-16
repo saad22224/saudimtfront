@@ -1406,7 +1406,7 @@
                             </div>
                             <div style="padding: 20px; background: white;">
                                 <h4> Laszlo Puczko
- 
+
                                 </h4>
                                 <p style="color: #4fd1c7;"> لازلو بوتسكو
 
@@ -1433,10 +1433,10 @@
                             </div>
                             <div style="padding: 20px; background: white;">
                                 <h4> Talal Althumali
- 
- 
+
+
                                 </h4>
-                                <p style="color: #4fd1c7;">  طلال الثمالي
+                                <p style="color: #4fd1c7;"> طلال الثمالي
 
 
 
@@ -1463,11 +1463,11 @@
                             </div>
                             <div style="padding: 20px; background: white;">
                                 <h4> Ahmed Moshli
- 
- 
- 
+
+
+
                                 </h4>
-                                <p style="color: #4fd1c7;">   أحمد مسحلي
+                                <p style="color: #4fd1c7;"> أحمد مسحلي
 
 
 
@@ -1480,18 +1480,25 @@
                         </div>
             </section>
         </div>
+
+
+
+
+
         <div id="speakers" class="page">
-            <section
-                style="background: linear-gradient(135deg, #2b6cb8 0%, #1e5aa8 100%); color: white; padding: 80px 0; text-align: center;">
+            <section style=" padding: 80px 0; text-align: center;">
+                <img src="assets/logo.png" alt="logo"
+                    style="width:250px; height:100px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.15); object-fit:cover;">
+
                 <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
                     <h1
                         style="font-size: 3.5em; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
-                        المؤتمر السنوي للسياحة العلاجية</h1>
+                        المتحدثون</h1>
                     <p style="font-size: 1.2em; font-weight: 300; margin: 0 0 40px 0; opacity: 0.95; line-height: 1.6;">
-                        انضم إلينا في هذا الحدث الاستثنائي لتبادل الخبرات والمعرفة في مجال السياحة العلاجية</p>
+                        نخبة من الخبراء والمتخصصين في مجال السياحة العلاجية من جميع أنحاء العالم</p>
 
                     <!-- Event Details -->
-                    <div
+                    <!-- <div
                         style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; margin-top: 40px;">
                         <div style="display: flex; align-items: center; gap: 10px;">
                             <div
@@ -1522,17 +1529,17 @@
                                 <div style="font-size: 0.9em; opacity: 0.8;">16 متحدث مميز</div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Location and Date -->
-                    <div style="margin-top: 30px; display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;">
+                    <!-- <div style="margin-top: 30px; display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;">
                         <div style="text-align: center;">
                             <div style="font-size: 1.1em; font-weight: 600;">الطائف، المملكة العربية السعودية</div>
                         </div>
                         <div style="text-align: center;">
                             <div style="font-size: 1.1em; font-weight: 600;">يوليو 2025</div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </section>
 
@@ -1903,7 +1910,7 @@
                             </div>
                             <div style="padding: 20px; background: white;">
                                 <h4> Laszlo Puczko
- 
+
                                 </h4>
                                 <p style="color: #4fd1c7;"> لازلو بوتسكو
 
@@ -1930,10 +1937,10 @@
                             </div>
                             <div style="padding: 20px; background: white;">
                                 <h4> Talal Althumali
- 
- 
+
+
                                 </h4>
-                                <p style="color: #4fd1c7;">  طلال الثمالي
+                                <p style="color: #4fd1c7;"> طلال الثمالي
 
 
 
@@ -1960,11 +1967,11 @@
                             </div>
                             <div style="padding: 20px; background: white;">
                                 <h4> Ahmed Moshli
- 
- 
- 
+
+
+
                                 </h4>
-                                <p style="color: #4fd1c7;">   أحمد مسحلي
+                                <p style="color: #4fd1c7;"> أحمد مسحلي
 
 
 
@@ -1976,6 +1983,339 @@
                             </div>
                         </div>
             </section>
+        </div>
+
+        <style>
+            .main-title {
+                text-align: center;
+                font-size: 3em;
+                font-weight: bold;
+                color: #2c3e50;
+                margin-bottom: 50px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .test {
+                display: grid !important;
+                gap: 30px !important;
+                grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+                padding: 20px;
+                /* مسافة داخلية */
+            }
+
+
+            .attendee-card {
+                background: white;
+                border-radius: 20px;
+                padding: 30px;
+                box-shadow: 0 30px 35px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .attendee-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 6px;
+                border-radius: 20px 20px 0 0;
+            }
+
+            .attendee-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 50px 50px rgba(0, 0, 0, 0.15);
+            }
+
+            .card-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                gap: 15px;
+            }
+
+            .card-icon {
+                width: 50px;
+                height: 50px;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                color: white;
+                flex-shrink: 0;
+            }
+
+            .card-title {
+                font-size: 1.4em;
+                font-weight: bold;
+                color: #2c3e50;
+                line-height: 1.3;
+            }
+
+            .card-content {
+                color: #555;
+                line-height: 1.8;
+                font-size: 1.05em;
+            }
+
+            /* Color themes for each card */
+            .attendee-card:nth-child(1)::before {
+                background: linear-gradient(90deg, #1abc9c, #16a085);
+            }
+
+            .attendee-card:nth-child(1) .card-icon {
+                background: linear-gradient(135deg, #1abc9c, #16a085);
+            }
+
+            .attendee-card:nth-child(2)::before {
+                background: linear-gradient(90deg, #9b59b6, #8e44ad);
+            }
+
+            .attendee-card:nth-child(2) .card-icon {
+                background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            }
+
+            .attendee-card:nth-child(3)::before {
+                background: linear-gradient(90deg, #e74c3c, #c0392b);
+            }
+
+            .attendee-card:nth-child(3) .card-icon {
+                background: linear-gradient(135deg, #e74c3c, #c0392b);
+            }
+
+            .attendee-card:nth-child(4)::before {
+                background: linear-gradient(90deg, #f39c12, #d68910);
+            }
+
+            .attendee-card:nth-child(4) .card-icon {
+                background: linear-gradient(135deg, #f39c12, #d68910);
+            }
+
+            .attendee-card:nth-child(5)::before {
+                background: linear-gradient(90deg, #3498db, #2980b9);
+            }
+
+            .attendee-card:nth-child(5) .card-icon {
+                background: linear-gradient(135deg, #3498db, #2980b9);
+            }
+
+            .attendee-card:nth-child(6)::before {
+                background: linear-gradient(90deg, #2ecc71, #27ae60);
+            }
+
+            .attendee-card:nth-child(6) .card-icon {
+                background: linear-gradient(135deg, #2ecc71, #27ae60);
+            }
+
+            .attendee-card:nth-child(7)::before {
+                background: linear-gradient(90deg, #e67e22, #d35400);
+            }
+
+            .attendee-card:nth-child(7) .card-icon {
+                background: linear-gradient(135deg, #e67e22, #d35400);
+            }
+
+            .attendee-card:nth-child(8)::before {
+                background: linear-gradient(90deg, #34495e, #2c3e50);
+            }
+
+            .attendee-card:nth-child(8) .card-icon {
+                background: linear-gradient(135deg, #34495e, #2c3e50);
+            }
+
+            .attendee-card:nth-child(9)::before {
+                background: linear-gradient(90deg, #ff6b6b, #ee5a52);
+            }
+
+            .attendee-card:nth-child(9) .card-icon {
+                background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            }
+
+            .attendee-card:nth-child(10)::before {
+                background: linear-gradient(90deg, #4ecdc4, #44a08d);
+            }
+
+            .attendee-card:nth-child(10) .card-icon {
+                background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            }
+
+            .attendee-card:nth-child(11)::before {
+                background: linear-gradient(90deg, #667eea, #764ba2);
+            }
+
+            .attendee-card:nth-child(11) .card-icon {
+                background: linear-gradient(135deg, #667eea, #764ba2);
+            }
+
+            @media (max-width: 768px) {
+                .attendees {
+                    grid-template-columns: 1fr;
+                }
+
+                .main-title {
+                    font-size: 2.2em;
+                }
+
+                .attendee-card {
+                    padding: 20px;
+                }
+
+                .card-title {
+                    font-size: 1.2em;
+                }
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .attendee-card {
+                animation: fadeInUp 0.6s ease forwards;
+            }
+
+            .attendee-card:nth-child(odd) {
+                animation-delay: 0.1s;
+            }
+
+            .attendee-card:nth-child(even) {
+                animation-delay: 0.2s;
+            }
+        </style>
+
+
+        <div id="attendees" class="page">
+            <div class="test">
+            <div class="logo" style="width: 100%; text-align: center; padding-top: 60px;">
+                <img src="assets/logo.png" alt="logo" style="width:250px; 
+                     height:100px; border-radius:12px;
+                      box-shadow:0 4px 10px rgba(0,0,0,.15); object-fit:cover;">
+            </div>
+            <h1 class="main-title">الفئات المستهدفة</h1>
+            <div class="attendee-card">
+                <div class="card-header">
+                    <div class="card-icon">🩺</div>
+                    <h2 class="card-title">مقدمو الرعاية الصحية</h2>
+                </div>
+                <div class="card-content">
+                    فرصة فريدة لعرض خبراتهم الطبية وإبراز مكانتهم كمبتكرين ضمن سوق عالمي متنامٍ للرعاية الصحية العلاجية.
+                    من خلال المشاركة في الحوارات والندوات، يمكنهم توسيع شبكة علاقاتهم مع صناع القرار، وعقد شراكات
+                    استراتيجية تدعم نموهم وانتشارهم دوليًا.
+                </div>
+            </div>
+
+            <div class="attendee-card">
+                <div class="card-header">
+                    <div class="card-icon">✈️</div>
+                    <h2 class="card-title">وكالات السفر المتخصصة في السياحة العلاجية</h2>
+                </div>
+                <div class="card-content">
+                    تمكينهم من بناء علاقات وثيقة مع أبرز مزودي خدمات السياحة العلاجية، لتطوير باقات مبتكرة تمثل ميزة
+                    تنافسية حقيقية. كما تتيح لهم الفعالية التواصل مع ممثلي الحكومات وقادة القطاع للاطلاع على السياسات
+                    المستقبلية والاتجاهات المؤثرة.
+                </div>
+            </div>
+
+            <div class="attendee-card">
+                <div class="card-header">
+                    <div class="card-icon">🏥</div>
+                    <h2 class="card-title">الممارسون والمؤسسات الطبية</h2>
+                </div>
+                <div class="card-content">
+                    منصة مثالية للظهور العالمي من خلال عرض خدماتهم أمام جمهور يشمل وكالات السفر المتخصصة والحكومات. كما
+                    يمكنهم عقد شراكات مع منتجعات ومراكز صحية فاخرة، للوصول إلى شريحة السياحة الراقية المهتمة بالعلاج
+                    الفاخر.
+                </div>
+            </div>
+
+            <div class="attendee-card">
+                <div class="card-header">
+                    <div class="card-icon">🎓</div>
+                    <h2 class="card-title">الجامعات والمؤسسات التعليمية</h2>
+                </div>
+                <div class="card-content">
+                    فرصة لتوسيع نطاق التعاون الأكاديمي عبر شراكات محلية ودولية تدعم البحث العلمي في مجال السياحة
+                    العلاجية. كما تسهّل بناء علاقات مع باحثين ومستثمرين مهتمين بالدراسات السريرية.
+                </div>
+            </div>
+
+            <div class="attendee-card">
+                <div class="card-header">
+                    <div class="card-icon">🏛️</div>
+                    <h2 class="card-title">ممثلو الجهات الحكومية</h2>
+                </div>
+                <div class="card-content">
+                    مساحة للحوار مع أصحاب المصلحة لمناقشة تطوير البنية التحتية للسياحة العلاجية من خلال الشراكة بين
+                    القطاعين العام والخاص. تتيح الفعالية مواءمة السياسات مع تطورات السوق العالمي.
+                </div>
+            </div>
+
+            <div class="attendee-card">
+                <div class="card-header">
+                    <div class="card-icon">💼</div>
+                    <h2 class="card-title">المستثمرون ورواد الأعمال في قطاع الرعاية الصحية</h2>
+                </div>
+                <div class="card-content">
+                    تمكينهم من الدخول إلى قطاع سريع النمو عبر التعرف على فرص استثمارية واعدة. كما توفر الفعالية فرصة
+                    للتواصل مع قادة القطاع وتحديد نقاط الدخول الاستراتيجية إلى السوق.
+                </div>
+            </div>
+
+            <div class="attendee-card">
+                <div class="card-header">
+                    <div class="card-icon">🚀</div>
+                    <h2 class="card-title">الشركات الناشئة وشركات التقنية</h2>
+                </div>
+                <div class="card-content">
+                    منصة لعرض حلولهم الصحية الرقمية المبتكرة مثل الطب عن بعد والذكاء الاصطناعي. يمكنهم التواصل مع مزودي
+                    الرعاية ووكالات السفر لعقد شراكات استراتيجية تعزز التحول الرقمي في الرعاية الصحية.
+                </div>
+            </div>
+
+            <div class="attendee-card">
+                <div class="card-header">
+                    <div class="card-icon">🤝</div>
+                    <h2 class="card-title">مزودو الخدمات المساندة للسياحة العلاجية</h2>
+                </div>
+                <div class="card-content">
+                    مثل شركات النقل، الضيافة، التغذية العلاجية وغيرها، يمكنهم الاستفادة من الفعالية لتسويق خدماتهم
+                    وتشكيل شراكات مع شركات التأمين ووكالات السفر لتقديم تجربة مريض شاملة ومتكاملة.
+                </div>
+            </div>
+
+            <div class="attendee-card">
+                <div class="card-header">
+                    <div class="card-icon">🏖️</div>
+                    <h2 class="card-title">منتجعات الصحة والعافية</h2>
+                </div>
+                <div class="card-content">
+                    الحضور يمنحهم فرصة لبناء شراكات مع منشآت وشركات السياحة العلاجية، وتطوير برامج علاجية تدمج بين
+                    الرفاهية والممارسات التقليدية، ما يفتح لهم آفاق جديدة في الأسواق الدولية.
+                </div>
+            </div>
+
+            <div class="attendee-card">
+                <div class="card-header">
+                    <div class="card-icon">🛡️</div>
+                    <h2 class="card-title">شركات التأمين الدولية والمحلية</h2>
+                </div>
+                <div class="card-content">
+                    اكتشاف فرص لتوسيع نطاق تغطياتهم لتشمل خدمات السياحة العلاجية، وبناء باقات تأمينية متخصصة بالتعاون مع
+                    مقدمي الرعاية ووكالات السفر، مما يعزز مكانتهم كرُوّاد في التأمين الصحي الشامل.
+                </div>
+            </div>
+            </div>
+        </div>
         </div>
 
         <!-- Registration Page -->
