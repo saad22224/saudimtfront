@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمعية السياحة العلاجية - المؤتمر السنوي للسياحة العلاجية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo">
+                    <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20 60 C20 60, 30 40, 40 45 C50 35, 60 40, 70 35 C80 40, 90 35, 100 40 C100 40, 95 55, 100 60 C95 65, 20 65, 20 60 Z"
+                            fill="#666" stroke="#999" stroke-width="1" />
+                        <circle cx="60" cy="25" r="3" fill="#2D8F8F" />
+                        <path d="M55 35 C55 35, 60 30, 65 35 C65 35, 62 40, 60 40 C58 40, 55 35, 55 35 Z"
+                            fill="#2D8F8F" />
+                        <text x="60" y="75" text-anchor="middle" font-size="8" fill="#666">جمعية السياحة العلاجية</text>
+                        <text x="60" y="85" text-anchor="middle" font-size="6" fill="#999">Medical Tourism
+                            Association</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="nav-menu">
+                <div class="nav-item">
+                    <a href="#" onclick="showPage('home')" class="nav-link active">الرئيسية</a>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">من نحن <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="showPage('about')">عن الجمعية</a>
+                        <a href="#" onclick="showPage('taif')">عن الطائف</a>
+                        <a href="#" onclick="showPage('conference-about')">عن المؤتمر</a>
+                        <a href="#" onclick="showPage('committee')">اللجنة العلمية</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">المؤتمر <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="showPage('program')">برنامج المؤتمر</a>
+                        <a href="#" onclick="showPage('speakers')">المتحدثون</a>
+                        <a href="#" onclick="showPage('attendees')">من يجب أن يحضر</a>
+                        <a href="#" onclick="showPage('registration')">سجل الآن</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">الشركاء والرعاة <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="showPage('sponsors')">الرعاة</a>
+                        <a href="#" onclick="showPage('sponsorship')">احجز رعايتك</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">الإعلام <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="showPage('media')">تغطية إعلامية</a>
+                        <a href="#" onclick="showPage('exhibition')">المعرض</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">الضيافة <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="showPage('accommodation')">الإقامة</a>
+                        <a href="#" onclick="showPage('visa')">متطلبات التأشيرة</a>
+                        <a href="#" onclick="showPage('flights')">الرحلات الجوية</a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#" onclick="showPage('contact')" class="nav-link">اتصل بنا</a>
+                </div>
+            </div>
+
+            <div class="language-switcher">
+                <button class="lang-btn active" onclick="switchLanguage('ar')">العربية</button>
+                <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main id="main-content">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="hero-background"></div>
+                <div class="hero-content">
+                    <div class="logo-hero">
+                        <svg width="200" height="120" viewBox="0 0 200 120" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M30 90 C30 90, 45 60, 60 67 C75 52, 90 60, 105 52 C120 60, 135 52, 150 60 C150 60, 143 82, 150 90 C143 97, 30 97, 30 90 Z"
+                                fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+                            <circle cx="90" cy="35" r="4" fill="white" />
+                            <path d="M82 50 C82 50, 90 42, 98 50 C98 50, 93 60, 90 60 C87 60, 82 50, 82 50 Z"
+                                fill="white" />
+                            <text x="90" y="115" text-anchor="middle" font-size="12" fill="white">جمعية السياحة
+                                العلاجية</text>
+                            <text x="90" y="125" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.8)">Medical
+                                Tourism Association</text>
+                        </svg>
+                    </div>
+
+                    <h1 class="hero-title">المؤتمر السنوي للسياحة العلاجية</h1>
+                    <p class="hero-subtitle">نحو مستقبل أفضل للسياحة العلاجية في المملكة العربية السعودية</p>
+
+                    <div class="hero-info">
+                        <div class="info-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>يوليو 2025</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>الطائف، المملكة العربية السعودية</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-users"></i>
+                            <span>أكثر من 500 مشارك</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showPage('registration')">سجل الآن</button>
+                        <button class="btn btn-secondary" onclick="showPage('about')">تعرف على المزيد</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-preview"
+                style="padding: 4rem 0; background: linear-gradient(to bottom, #f8f9fa, #fff);">
+                <div class="container" style="width: 90%; max-width: 1400px; margin: 0 auto;">
+                    <h2
+                        style="text-align: center; margin-bottom: 3rem; color: #2c3e50; font-size: 2.2rem; position: relative;">
+                        من نحن
+                        <!-- <span
+                            style="display: block; width: 60px; height: 4px; background: #3498db; margin: 15px auto 0;"></span> -->
+                    </h2>
+
+
+                    <div
+                        style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;  padding: 10px 5px;">
+                        <!-- رؤيتنا -->
+                        <div style="flex: 1 1 calc(25% - 20px); min-width: 250px;
+   background: white; border-radius: 15px; 
+   padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden; height: 300px;">
+
+                            <div
+                                style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #3498db, #2980b9);">
+                            </div>
+                            <i class="fas fa-eye" style="font-size: 24px; color: #3498db; margin-bottom: 10px;"></i>
+                            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">رؤيتنا</h3>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">أن نكون الرائدة في تطوير قطاع السياحة
+                                العلاجية وتعزيز التنمية المستدامة</p>
+                        </div>
+
+                        <!-- رسالتنا -->
+                        <div
+                            style="flex: 1 1 calc(25% - 20px); min-width: 250px; background: white; border-radius: 15px; padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;">
+
+                            <div
+                                style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #e74c3c, #c0392b);">
+                            </div>
+                            <i class="fas fa-envelope"
+                                style="font-size: 24px; color: #e74c3c; margin-bottom: 10px;"></i>
+                            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">رسالتنا</h3>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">تمكين المجتمعات المحلية من خلال الخدمات
+                                الطبية المتميزة والسياحة العلاجية</p>
+                        </div>
+
+
+                        <!-- قيمنا -->
+                        <div
+                            style="flex: 1 1 calc(25% - 20px); min-width: 250px; background: white; border-radius: 15px; padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;">
+
+                            <div
+                                style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #2ecc71, #27ae60);">
+                            </div>
+                            <i class="fas fa-shield-alt"
+                                style="font-size: 24px; color: #2ecc71; margin-bottom: 10px;"></i>
+                            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">قيمنا</h3>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">الشفافية والمسؤولية والتميز في جميع
+                                أعمالنا الطبية والسياحية</p>
+                        </div>
+
+                        <!-- تأثيرنا -->
+                        <div
+                            style="flex: 1 1 calc(25% - 20px); min-width: 250px; background: white; border-radius: 15px; padding: 2rem; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;">
+
+                            <div
+                                style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #9b59b6, #8e44ad);">
+                            </div>
+                            <i class="fas fa-chart-line"
+                                style="font-size: 24px; color: #9b59b6; margin-bottom: 10px;"></i>
+                            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.4rem;">تأثيرنا</h3>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">خدمة أكثر من 10,000 مستفيد في جميع
+                                أنحاء المملكة والعالم</p>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    /* للتأكد من التجاوب على الشاشات الصغيرة */
+                    @media (max-width: 1200px) {
+                        .container>div {
+                            /* overflow-x: auto; */
+                            padding-bottom: 20px;
+                        }
+                    }
+
+                    /* تأثير التحويم */
+                    div[style*="flex: 1"]:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+                    }
+                </style>
+            </section>
+            <section style="background-color: #e91e631a; padding: 4rem 0;">
+                <div class="container" style="width: 90%; max-width: 1400px; margin: 0 auto;">
+                    <h2
+                        style="text-align: center; margin-bottom: 3rem; color: #2c3e50; font-size: 2.2rem; position: relative;">
+                        نحو مستقبل مشرق للسياحة العلاجية في المملكة
+                    </h2>
+                    <p style="text-align: center; color: #666; line-height: 1.6; margin: 0;">
+                        رؤية 2030 تهدف إلى جعل المملكة وجهة عالمية رائدة في السياحة العلاجية
+                    </p>
+                </div>
+            </section>
+            <section class="conference-preview">
+                <div class="container">
+                    <h2>المؤتمر</h2>
+                    <p class="section-subtitle">انضم إلينا في هذا الحدث الاستثنائي لتبادل الخبرات والمعرفة في مجال
+                        السياحة العلاجية</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">أيام</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">مشارك</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">25</div>
+                            <div class="stat-label">متحدث</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">جلسة</div>
+                        </div>
+                    </div>
+
+                    <div class="cta-section">
+                        <button class="btn btn-primary" onclick="showPage('program')">اكتشف المزيد عن المؤتمر</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Pages -->
+        <div id="about" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>عن الجمعية</h1>
+                    <p>جمعية السياحة العلاجية هي منظمة رائدة تهدف إلى تطوير قطاع السياحة العلاجية وتعزيز التنمية
+                        المستدامة في المملكة العربية السعودية</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3>نشأة الجمعية</h3>
+                            <p>تأسست جمعية السياحة العلاجية عام 2020 بهدف تطوير قطاع السياحة العلاجية في المملكة العربية
+                                السعودية ودعم رؤية 2030 في تنويع الاقتصاد وجعل المملكة وجهة عالمية رائدة في مجال السياحة
+                                العلاجية.</p>
+                        </div>
+                        <div class="content-card">
+                            <h3>أهدافنا</h3>
+                            <ul>
+                                <li>تطوير وتنظيم قطاع السياحة العلاجية</li>
+                                <li>رفع مستوى الخدمات الطبية والسياحية</li>
+                                <li>تعزيز التعاون مع الجهات ذات العلاقة</li>
+                                <li>دعم الاستثمار في القطاع الصحي</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="taif" class="page" style="font-family: system-ui, -apple-system, sans-serif;">
+            <section class="page-hero"
+                style="background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 4rem 0; text-align: center; border-radius: 0 0 20px 20px; margin-bottom: 2rem;">
+                <div class="container" style="width: 90%; max-width: 1200px; margin: 0 auto;">
+                    <img src="taif-logo.png" alt="شعار الطائف"
+                        style="width: 120px; height: auto; margin-bottom: 1.5rem;">
+                    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">عن الطائف</h1>
+                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">مدينة الطائف، عروس
+                        المصايف ولؤلؤة الحجاز، مدينة تاريخية تجمع بين الجمال الطبيعي والتراث العريق</p>
+                </div>
+            </section>
+
+            <section style="padding: 2rem 0;">
+                <div style="width: 90%; max-width: 1200px; margin: 0 auto;">
+                    <!-- بطاقة رئيسية -->
+                    <div
+                        style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: right;">
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #2c3e50; margin: 0;">
+                            تقع مدينة الطائف في قلب مرتفعات الحجاز، وتُعد أكبر محافظات منطقة مكة المكرمة، والسابعة على
+                            مستوى المملكة من حيث المساحة.
+                            <span
+                                style="display: inline-block; background: #e74c3c; color: white; padding: 5px 15px; border-radius: 20px; margin-right: 10px; font-size: 0.9rem;">وجهة
+                                صيفية بامتياز</span>
+                        </p>
+                    </div>
+
+                    <!-- شبكة البطاقات -->
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                        <!-- بطاقة 1 -->
+                        <div
+                            style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-align: right;">
+                            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.3rem;">الموقع والمناخ</h3>
+                            <p style="color: #666; line-height: 1.6;">تقع مدينة الطائف في منطقة مكة المكرمة على ارتفاع
+                                1700 متر فوق سطح البحر، مما يجعلها تتمتع بمناخ معتدل ومنعش على مدار السنة.</p>
+                        </div>
+
+                        <!-- بطاقة 2 -->
+                        <div
+                            style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-align: right;">
+                            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.3rem;">المعالم والخدمات</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; color: #666;">
+                                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">مستشفيات ومراكز طبية
+                                    متطورة</li>
+                                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">منتجعات صحية ومراكز علاج
+                                    طبيعي</li>
+                                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">حدائق الورود الشهيرة</li>
+                                <li style="padding: 0.5rem 0;">فنادق ومنتجعات فاخرة</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- بطاقة عريضة -->
+                    <div
+                        style="background: linear-gradient(to right, #f8f9fa, white); border-radius: 15px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: right;">
+                        <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.3rem;">السياحة العلاجية في الطائف
+                        </h3>
+                        <p style="color: #666; line-height: 1.8;">
+                            تتميز الطائف بمقومات فريدة للسياحة العلاجية، من مناخها المعتدل إلى مرافقها الصحية المتطورة.
+                            تجمع المدينة بين الطبيعة الخلابة والخدمات الطبية الحديثة، مما يجعلها وجهة مثالية للسياحة
+                            العلاجية.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="conference-about" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>عن المؤتمر</h1>
+                    <p>"نحو مستقبل مشرق للسياحة العلاجية في المملكة" - رؤية 2030 تهدف إلى جعل المملكة وجهة عالمية رائدة
+                        في السياحة العلاجية</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3>أهداف المؤتمر</h3>
+                            <ul>
+                                <li>تبادل الخبرات والمعرفة في مجال السياحة العلاجية</li>
+                                <li>استعراض أفضل الممارسات العالمية</li>
+                                <li>مناقشة التحديات والفرص في القطاع</li>
+                                <li>بناء شراكات استراتيجية</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>محاور المؤتمر</h3>
+                            <ul>
+                                <li>السياسات والتشريعات</li>
+                                <li>الجودة والاعتماد</li>
+                                <li>التسويق والترويج</li>
+                                <li>التقنيات الحديثة</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="committee" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>اللجنة العلمية</h1>
+                    <p>نخبة من الخبراء والأكاديميين المتخصصين في مجال السياحة العلاجية</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="experts-grid">
+                        <div class="expert-card">
+                            <div class="expert-image"></div>
+                            <h3>د. محمد العتيبي</h3>
+                            <p>رئيس اللجنة العلمية</p>
+                            <span>استشاري طب الأسرة</span>
+                        </div>
+                        <div class="expert-card">
+                            <div class="expert-image"></div>
+                            <h3>د. فاطمة الزهراني</h3>
+                            <p>عضو اللجنة العلمية</p>
+                            <span>خبيرة السياحة العلاجية</span>
+                        </div>
+                        <div class="expert-card">
+                            <div class="expert-image"></div>
+                            <h3>د. عبدالله الحارثي</h3>
+                            <p>عضو اللجنة العلمية</p>
+                            <span>استشاري العلاج الطبيعي</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Conference Pages -->
+        <div id="program" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>برنامج المؤتمر</h1>
+                    <p>برنامج علمي شامل لمدة ثلاثة أيام مليء بالجلسات العلمية وورش العمل</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="program-timeline">
+                        <div class="day-program">
+                            <h3>اليوم الأول</h3>
+                            <div class="session">
+                                <span class="time">9:00 - 10:00</span>
+                                <div class="session-content">
+                                    <h4>حفل الافتتاح</h4>
+                                    <p>كلمات ترحيبية وعرض أهداف المؤتمر</p>
+                                </div>
+                            </div>
+                            <div class="session">
+                                <span class="time">10:30 - 12:00</span>
+                                <div class="session-content">
+                                    <h4>الجلسة الافتتاحية</h4>
+                                    <p>مستقبل السياحة العلاجية في المملكة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="speakers" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>المتحدثون</h1>
+                    <p>نخبة من الخبراء والمتخصصين من داخل المملكة وخارجها</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="speakers-grid">
+                        <div class="speaker-card">
+                            <div class="speaker-image"></div>
+                            <h3>د. أحمد المالكي</h3>
+                            <p>وزير الصحة</p>
+                            <span>المتحدث الرئيسي</span>
+                        </div>
+                        <div class="speaker-card">
+                            <div class="speaker-image"></div>
+                            <h3>د. سارة العمري</h3>
+                            <p>خبيرة السياحة العلاجية الدولية</p>
+                            <span>متحدثة مميزة</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="attendees" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>من يجب أن يحضر</h1>
+                    <p>المؤتمر مصمم لجميع المهتمين بقطاع السياحة العلاجية</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="attendees-grid">
+                        <div class="attendee-card">
+                            <i class="fas fa-user-md"></i>
+                            <h3>الأطباء والممارسين الصحيين</h3>
+                        </div>
+                        <div class="attendee-card">
+                            <i class="fas fa-building"></i>
+                            <h3>مدراء المستشفيات والمراكز الطبية</h3>
+                        </div>
+                        <div class="attendee-card">
+                            <i class="fas fa-plane"></i>
+                            <h3>شركات السياحة والسفر</h3>
+                        </div>
+                        <div class="attendee-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>المستثمرين ورجال الأعمال</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Registration Page -->
+        <div id="registration" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>سجل الآن</h1>
+                    <p>انضم إلينا في هذا الحدث الاستثنائي</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="registration-container">
+                        <form id="registrationForm" class="registration-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">الاسم الأول *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">الاسم الأخير *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">البريد الإلكتروني *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">رقم الهاتف *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="organization">الجهة / المنظمة</label>
+                                    <input type="text" id="organization" name="organization">
+                                </div>
+                                <div class="form-group">
+                                    <label for="position">المسمى الوظيفي</label>
+                                    <input type="text" id="position" name="position">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="attendeeType">نوع المشاركة *</label>
+                                <select id="attendeeType" name="attendeeType" required>
+                                    <option value="">اختر نوع المشاركة</option>
+                                    <option value="speaker">متحدث</option>
+                                    <option value="attendee">حضور</option>
+                                    <option value="sponsor">راعي</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="specialInterest">مجال الاهتمام</label>
+                                <textarea id="specialInterest" name="specialInterest" rows="3"
+                                    placeholder="اكتب مجال اهتمامك في السياحة العلاجية"></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    أرغب في تلقي النشرة الإخبارية للجمعية
+                                </label>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="terms" required>
+                                    <span class="checkmark"></span>
+                                    أوافق على الشروط والأحكام *
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <i class="fas fa-paper-plane"></i>
+                                إرسال طلب التسجيل
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sponsors Pages -->
+        <div id="sponsors" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>الرعاة</h1>
+                    <p>شركاؤنا في النجاح</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="sponsors-section">
+                        <h3>الرعاة الذهبيون</h3>
+                        <div class="sponsors-grid">
+                            <div class="sponsor-card gold">
+                                <div class="sponsor-logo"></div>
+                                <p>راعي ذهبي</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="sponsorship" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>احجز رعايتك</h1>
+                    <p>كن جزءاً من هذا الحدث المميز</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="sponsorship-packages">
+                        <div class="package-card">
+                            <h3>الرعاية الذهبية</h3>
+                            <div class="price">50,000 ريال</div>
+                            <ul>
+                                <li>شعار الشركة في جميع المواد</li>
+                                <li>جناح مميز في المعرض</li>
+                                <li>فرصة للتحدث</li>
+                            </ul>
+                            <button class="btn btn-primary">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Media Pages -->
+        <div id="media" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>تغطية إعلامية</h1>
+                    <p>آخر الأخبار والتحديثات حول المؤتمر</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="media-grid">
+                        <div class="media-card">
+                            <h3>بيان صحفي</h3>
+                            <p>إعلان عن انطلاق فعاليات المؤتمر السنوي للسياحة العلاجية</p>
+                            <span class="date">15 يناير 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="exhibition" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>المعرض</h1>
+                    <p>معرض مصاحب للمؤتمر يضم أحدث التقنيات والخدمات في السياحة العلاجية</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="exhibition-info">
+                        <div class="info-card">
+                            <h3>معلومات المعرض</h3>
+                            <ul>
+                                <li>أكثر من 50 عارض</li>
+                                <li>3 أيام متواصلة</li>
+                                <li>أحدث التقنيات الطبية</li>
+                                <li>خدمات السياحة العلاجية</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Hospitality Pages -->
+        <div id="accommodation" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>الإقامة</h1>
+                    <p>خيارات إقامة متنوعة لجميع المشاركين</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="hotels-grid">
+                        <div class="hotel-card">
+                            <h3>فندق الطائف الكبير</h3>
+                            <p>فندق 5 نجوم في قلب المدينة</p>
+                            <div class="price">500 ريال/ليلة</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="visa" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>متطلبات التأشيرة</h1>
+                    <p>معلومات مفصلة حول إجراءات الحصول على التأشيرة</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="visa-info">
+                        <div class="info-card">
+                            <h3>التأشيرة السياحية</h3>
+                            <p>يمكن للمشاركين من خارج المملكة الحصول على التأشيرة السياحية الإلكترونية</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="flights" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>الرحلات الجوية</h1>
+                    <p>معلومات الرحلات والمطارات القريبة</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="flights-info">
+                        <div class="info-card">
+                            <h3>مطار الطائف الإقليمي</h3>
+                            <p>المطار الأقرب للمؤتمر مع رحلات يومية من جميع مدن المملكة</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <section class="page-hero">
+                <div class="container">
+                    <h1>اتصل بنا</h1>
+                    <p>نحن هنا للإجابة على جميع استفساراتكم</p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>العنوان</h4>
+                                    <p>الطائف، المملكة العربية السعودية</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>الهاتف</h4>
+                                    <p>+966 50 930 0053</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>البريد الإلكتروني</h4>
+                                    <p>info@saudimt2025.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="contactName">الاسم *</label>
+                                <input type="text" id="contactName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">البريد الإلكتروني *</label>
+                                <input type="email" id="contactEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject">الموضوع</label>
+                                <input type="text" id="contactSubject">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">الرسالة *</label>
+                                <textarea id="contactMessage" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg width="80" height="50" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15 40 C15 40, 25 25, 35 30 C45 20, 55 25, 65 20 C65 20, 60 35, 65 40 C60 45, 15 45, 15 40 Z"
+                                fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                            <circle cx="40" cy="15" r="2" fill="white" />
+                        </svg>
+                    </div>
+                    <h3>جمعية السياحة العلاجية</h3>
+                    <p>منظمة رائدة في تطوير قطاع السياحة العلاجية وتعزيز التنمية المستدامة في المملكة العربية السعودية.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showPage('home')">الرئيسية</a></li>
+                        <li><a href="#" onclick="showPage('about')">من نحن</a></li>
+                        <li><a href="#" onclick="showPage('program')">المؤتمر</a></li>
+                        <li><a href="#" onclick="showPage('registration')">التسجيل</a></li>
+                        <li><a href="#" onclick="showPage('contact')">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>المؤتمر</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showPage('speakers')">المتحدثون</a></li>
+                        <li><a href="#" onclick="showPage('program')">البرنامج</a></li>
+                        <li><a href="#" onclick="showPage('sponsors')">الرعاة</a></li>
+                        <li><a href="#" onclick="showPage('accommodation')">الإقامة</a></li>
+                        <li><a href="#" onclick="showPage('media')">الإعلام</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>معلومات التواصل</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> الطائف، المملكة العربية السعودية</p>
+                        <p><i class="fas fa-phone"></i> +966 50 930 0053</p>
+                        <p><i class="fas fa-envelope"></i> info@saudimt2025.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 جمعية السياحة العلاجية. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
