@@ -4456,7 +4456,7 @@
             <body>
                 <div class="flights-container">
                     <div class="flights-header">
-                                                <div class="flights-icon-container">
+                        <div class="flights-icon-container">
                             <div class="flights-icon">
                                 <img src="assets/logo.png" style="width: 200px;
                                  height: 100px; border-radius: 10px;
@@ -4553,61 +4553,267 @@
 
         <!-- Contact Page -->
         <div id="contact" class="page">
-            <section class="page-hero">
-                <div class="container">
-                    <h1>اتصل بنا</h1>
-                    <p>نحن هنا للإجابة على جميع استفساراتكم</p>
-                </div>
-            </section>
-            <section class="content-section">
-                <div class="container">
-                    <div class="contact-container">
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <h4>العنوان</h4>
-                                    <p>الطائف، المملكة العربية السعودية</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <div>
-                                    <h4>الهاتف</h4>
-                                    <p>+966 50 930 0053</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <h4>البريد الإلكتروني</h4>
-                                    <p>info@saudimt2025.com</p>
-                                </div>
-                            </div>
-                        </div>
+         <style>
+               .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .contact-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .contact-subtitle {
+            font-size: 18px;
+            color: #7f8c8d;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .contact-form {
+            background: #f8f9ff;
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid #e8ecff;
+        }
+        
+        .form-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #2c3e50;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        .form-label::after {
+            content: " *";
+            color: #e74c3c;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e8ecff;
+            border-radius: 10px;
+            background: white;
+            color: #2c3e50;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input::placeholder {
+            color: #bdc3c7;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .contact-info2 {
+            background: #e8f5e8;
+            padding: 40px;
+            border-radius: 20px;
+            color: #2c3e50;
+            position: relative;
+            border: 2px solid #d4e8d4;
+        }
+        
+        .info-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #2c3e50;
+        }
+        
+        .info-item {
+            margin-bottom: 35px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: #4ecdc4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: white;
+        }
+        
+        .info-content h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .info-content p {
+            font-size: 16px;
+            color: #5a6c7d;
+            line-height: 1.6;
+        }
+        
+        .logo-watermark {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            opacity: 0.1;
+            width: 80px;
+            height: 80px;
+        }
+        
+        .footer-text {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #5a6c7d;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .contact-container {
+                padding: 30px 20px;
+            }
+            
+            .contact-title {
+                font-size: 36px;
+            }
+        }
+    </style>
 
-                        <form class="contact-form">
-                            <div class="form-group">
-                                <label for="contactName">الاسم *</label>
-                                <input type="text" id="contactName" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="contactEmail">البريد الإلكتروني *</label>
-                                <input type="email" id="contactEmail" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="contactSubject">الموضوع</label>
-                                <input type="text" id="contactSubject">
-                            </div>
-                            <div class="form-group">
-                                <label for="contactMessage">الرسالة *</label>
-                                <textarea id="contactMessage" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
-                        </form>
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1 class="contact-title">اتصل بنا</h1>
+            <p class="contact-subtitle">
+                يسعدنا تواصلكم معنا لأي استفسارات أو اقتراحات. نرحب بعبئة النموذج أدناه وسنقوم بالرد في أقرب وقت.
+            </p>
+        </div>
+        
+        <div class="contact-content">
+            <div class="contact-form">
+                <h2 class="form-title">أرسل رسالة</h2>
+                
+                <div class="form-group">
+                    <label class="form-label">الاسم الكامل</label>
+                    <input type="text" class="form-input" placeholder="أدخل اسمك الكامل">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">البريد الإلكتروني</label>
+                    <input type="email" class="form-input" placeholder="example@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">رقم الهاتف</label>
+                    <input type="tel" class="form-input" placeholder="05xxxxxxxx">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">الرسالة</label>
+                    <textarea class="form-input form-textarea" placeholder="اكتب رسالتك هنا..."></textarea>
+                </div>
+            </div>
+            
+            <div class="contact-info2">
+                <h2 class="info-title">معلومات التواصل</h2>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        📍
+                    </div>
+                    <div class="info-content">
+                        <h3>العنوان</h3>
+                        <p>المملكة العربية السعودية - الطائف</p>
                     </div>
                 </div>
-            </section>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        📧
+                    </div>
+                    <div class="info-content">
+                        <h3>البريد الإلكتروني</h3>
+                        <p>example@email.com</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        📞
+                    </div>
+                    <div class="info-content">
+                        <h3>رقم التواصل</h3>
+                        <p>+966 555 555 555</p>
+                    </div>
+                </div>
+                
+                <div class="footer-text">
+                    نتطلع لخدمتكم وتقديم أفضل الخدمات في مجال السياحة العلاجية
+                </div>
+                
+                <!-- Logo watermark placeholder -->
+                <div class="logo-watermark">
+                    <svg viewBox="0 0 100 100" fill="currentColor">
+                        <path d="M50 10 L90 50 L50 90 L10 50 Z" opacity="0.3"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+          
+             
         </div>
     </main>
     <style>
@@ -4664,7 +4870,7 @@
 
 
                 <div class="footer-section">
-                    <h4>روابط سريعة</h4>
+                    <h4 style="color: rgba(0, 255, 157, 0.5);">روابط سريعة</h4>
                     <ul class="footer-links">
                         <li><a href="#" onclick="showPage('home')">الرئيسية</a></li>
                         <li><a href="#" onclick="showPage('about')">من نحن</a></li>
@@ -4675,7 +4881,7 @@
                 </div>
 
                 <div class="footer-section">
-                    <h4>المؤتمر</h4>
+                    <h4 style="color: palegreen;">المؤتمر</h4>
                     <ul class="footer-links">
                         <li><a href="#" onclick="showPage('speakers')">المتحدثون</a></li>
                         <li><a href="#" onclick="showPage('program')">البرنامج</a></li>
@@ -4686,11 +4892,11 @@
                 </div>
 
                 <div class="footer-section">
-                    <h4>معلومات التواصل</h4>
+                    <h4 style="color: orangered;">معلومات التواصل</h4>
                     <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt"></i> الطائف، المملكة العربية السعودية</p>
-                        <p><i class="fas fa-phone"></i> +966 50 930 0053</p>
-                        <p><i class="fas fa-envelope"></i> info@saudimt2025.com</p>
+                        <p><i style="color: orangered;" class="fas fa-map-marker-alt"></i> الطائف، المملكة العربية السعودية</p>
+                        <p><i style="color: orangered;" class="fas fa-phone"></i> +966 50 930 0053</p>
+                        <p><i style="color: orangered;" class="fas fa-envelope"></i> info@saudimt2025.com</p>
                     </div>
                 </div>
             </div>
