@@ -3106,12 +3106,11 @@
 
                     <h1
                         style="color: white; font-size: 3.5rem; font-weight: 700; margin: 0 0 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                         الرعاة</h1>
-                    <p
-                        style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 
+                        الرعاة</h1>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1.3rem; font-weight: 
                         400; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6;">
                         الشركات والمؤسسات الراعية للمؤتمر
-                          </p>
+                    </p>
                 </div>
             </section>
 
@@ -3159,34 +3158,367 @@
                     </div>
 
                     <!-- Additional Info Cards -->
-              
+
                 </div>
             </section>
         </div>
 
+        <style>
+            #sponsorship {
+                max-width: 1200px;
+                margin: 0 auto;
+                background: white;
+                border-radius: 20px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+
+            .header {
+                /* background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); */
+                /* color: white; */
+                text-align: center;
+                padding: 40px 20px;
+                position: relative;
+            }
+
+            /* .logo {
+                width: 80px;
+                height: 80px;
+                background: linear-gradient(45deg, #f39c12, #e67e22);
+                border-radius: 50%;
+                margin: 0 auto 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                font-weight: bold;
+                border: 3px solid rgba(255, 255, 255, 0.3);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            } */
+
+            .header h1 {
+                font-size: 2.5rem;
+                margin-bottom: 15px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+
+            .header p {
+                font-size: 1.1rem;
+                opacity: 0.9;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .content {
+                padding: 60px 40px;
+            }
+
+            .packages-section {
+                margin-bottom: 60px;
+            }
+
+            .packages-title {
+                text-align: center;
+                font-size: 2rem;
+                color: #2c3e50;
+                margin-bottom: 40px;
+                position: relative;
+            }
+
+            .packages-title::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 3px;
+                background: linear-gradient(45deg, #f39c12, #e67e22);
+                border-radius: 2px;
+            }
+
+            .packages-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 30px;
+                margin-bottom: 50px;
+            }
+
+            .package {
+                background: white;
+                border-radius: 15px;
+                padding: 30px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                border: 2px solid transparent;
+                transition: all 0.3s ease;
+                position: relative;
+            }
+
+            .package:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            }
+
+            .package.gold {
+                border-color: #f39c12;
+                background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
+            }
+
+            .package.silver {
+                border-color: #95a5a6;
+                background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            }
+
+            .package.bronze {
+                border-color: #cd7f32;
+                background: linear-gradient(135deg, #fff5f0 0%, #ffffff 100%);
+            }
+
+            .package-header {
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+            .package-title {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #2c3e50;
+            }
+
+            .package-subtitle {
+                color: #7f8c8d;
+                font-size: 0.95rem;
+            }
+
+            .package-features {
+                list-style: none;
+            }
+
+            .package-features li {
+                padding: 8px 0;
+                padding-right: 25px;
+                position: relative;
+                color: #34495e;
+            }
+
+            .package-features li::before {
+                content: '✓';
+                position: absolute;
+                right: 0;
+                color: #27ae60;
+                font-weight: bold;
+            }
+
+            .form-section {
+                background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+                border-radius: 15px;
+                padding: 40px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            }
+
+            .form-title {
+                text-align: center;
+                font-size: 1.8rem;
+                color: #2c3e50;
+                margin-bottom: 30px;
+                position: relative;
+            }
+
+            .form-title::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 40px;
+                height: 2px;
+                background: linear-gradient(45deg, #f39c12, #e67e22);
+                border-radius: 1px;
+            }
+
+            .form-grid {
+                display: flex;
+                flex-direction: column;
+                /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+                gap: 25px;
+                margin-bottom: 25px;
+            }
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .form-group label {
+                font-weight: bold;
+                color: #2c3e50;
+                margin-bottom: 8px;
+            }
+
+            .required {
+                color: #e74c3c;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 12px 15px;
+                border: 2px solid #e0e6ed;
+                border-radius: 8px;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+                background: white;
+            }
+
+            .form-group input:focus,
+            .form-group select:focus,
+            .form-group textarea:focus {
+                outline: none;
+                border-color: #f39c12;
+                box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+            }
+
+            .form-group textarea {
+                resize: vertical;
+                min-height: 100px;
+            }
+
+            .submit-btn {
+                background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+                color: white;
+                padding: 15px 40px;
+                border: none;
+                border-radius: 8px;
+                font-size: 1.1rem;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .submit-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
+            }
+
+            @media (max-width: 768px) {
+                .content {
+                    padding: 40px 20px;
+                }
+
+                .packages-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .form-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .header h1 {
+                    font-size: 2rem;
+                }
+            }
+        </style>
+
         <div id="sponsorship" class="page">
-            <section class="page-hero">
-                <div class="container">
-                    <h1>احجز رعايتك</h1>
-                    <p>كن جزءاً من هذا الحدث المميز</p>
+            <div class="header">
+                <div class="logo">
+                    <img src="assets/logo.png" style="width: 200px; height:
+                     100px; border-radius: 10px; box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);" alt="">
                 </div>
-            </section>
-            <section class="content-section">
-                <div class="container">
-                    <div class="sponsorship-packages">
-                        <div class="package-card">
-                            <h3>الرعاية الذهبية</h3>
-                            <div class="price">50,000 ريال</div>
-                            <ul>
-                                <li>شعار الشركة في جميع المواد</li>
+                <h1>احجز رعايتك</h1>
+                <p>كن جزءاً من هذا الحدث المهم وادعم مستقبل السياحة العلاجية في المملكة</p>
+            </div>
+
+            <div class="content">
+                <div class="packages-section">
+                    <h2 class="packages-title">باقات الرعاية</h2>
+
+                    <div class="packages-grid">
+                        <div class="package gold">
+                            <div class="package-header">
+                                <h3 class="package-title">الراعي الذهبي</h3>
+                                <p class="package-subtitle">الحصول على أفضل الفرص الترويجية والتسويقية</p>
+                            </div>
+                            <ul class="package-features">
+                                <li>شعار كبير في جميع المواد الترويجية</li>
                                 <li>جناح مميز في المعرض</li>
-                                <li>فرصة للتحدث</li>
+                                <li>فرصة إلقاء كلمة في الحفل</li>
+                                <li>10 دعوات مجانية</li>
                             </ul>
-                            <button class="btn btn-primary">احجز الآن</button>
+                        </div>
+
+                        <div class="package silver">
+                            <div class="package-header">
+                                <h3 class="package-title">الراعي الفضي</h3>
+                                <p class="package-subtitle">رعاية مميزة بفوائد متنوعة</p>
+                            </div>
+                            <ul class="package-features">
+                                <li>شعار متوسط في المواد الترويجية</li>
+                                <li>جناح في المعرض</li>
+                                <li>5 دعوات مجانية</li>
+                                <li>تغطية إعلامية</li>
+                            </ul>
+                        </div>
+
+                        <div class="package bronze">
+                            <div class="package-header">
+                                <h3 class="package-title">الراعي البرونزي</h3>
+                                <p class="package-subtitle">بداية مميزة للشراكة معنا</p>
+                            </div>
+                            <ul class="package-features">
+                                <li>شعار في البرنامج</li>
+                                <li>مساحة في المعرض</li>
+                                <li>3 دعوات مجانية</li>
+                                <li>شهادة تقدير</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </section>
+
+                <div class="form-section">
+                    <h2 class="form-title">طلب الرعاية</h2>
+
+                    <form>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>اسم المؤسسة <span class="required">*</span></label>
+                                <input type="text" placeholder="اسم الشركة أو المؤسسة" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>الشخص المسؤول <span class="required">*</span></label>
+                                <input type="text" placeholder="اسم الشخص المسؤول" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>رقم الهاتف <span class="required">*</span></label>
+                                <input type="tel" placeholder="05xxxxxxxx" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>نوع الرعاية <span class="required">*</span></label>
+                                <select required>
+                                    <option value="">اختر نوع الرعاية</option>
+                                    <option value="gold">راعي ذهبي</option>
+                                    <option value="silver">راعي فضي</option>
+                                    <option value="bronze">راعي برونزي</option>
+                                    <option value="custom">رعاية مخصصة</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>ملاحظات إضافية</label>
+                            <textarea placeholder="أي ملاحظات أو متطلبات خاصة"></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">إرسال طلب الرعاية</button>
+                    </form>
+                </div>
+            </div>
         </div>
 
         <!-- Media Pages -->
