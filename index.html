@@ -7,6 +7,8 @@
     <title>جمعية السياحة العلاجية - المؤتمر السنوي للسياحة العلاجية</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
@@ -41,7 +43,7 @@
                     <a href="#" class="nav-link">المؤتمر <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="#" onclick="showPage('program')">المؤتمر</a>
-                        <a href="#" onclick="showPage('program2')">برنامج المؤتمر</a>
+                        <a href="#" onclick="showPage('program2')">برنامج المنتدي</a>
                         <a href="#" onclick="showPage('speakers')">المتحدثون</a>
                         <a href="#" onclick="showPage('attendees')">من يجب أن يحضر</a>
                         <a href="#" onclick="showPage('registration')">سجل الآن</a>
@@ -114,7 +116,7 @@
             <div class="mobile-item dropdown">
                 <button class="dropdown-btn">المؤتمر <i class="fas fa-chevron-down"></i></button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="showPage('program')">برنامج المؤتمر</a>
+                    <a href="#" onclick="showPage('program')">برنامج المنتدي</a>
                     <a href="#" onclick="showPage('speakers')">المتحدثون</a>
                     <a href="#" onclick="showPage('attendees')">من يجب أن يحضر</a>
                     <a href="#" onclick="showPage('registration')">سجل الآن</a>
@@ -181,7 +183,7 @@
                         </div>
                         <div class="info-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>فندق انتركونتيننتال - الطائف</span>
+                            <span>  فندق إنتركونتيننتال – الطائف – المملكة العربية السعودية </span>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-users"></i>
@@ -1499,7 +1501,7 @@
                     /* background: linear-gradient(135deg, #2DD4BF 0%, #3B82F6 50%, #8B5CF6 100%); */
                     /* padding: 40px 30px; */
                     text-align: center;
-                    color: white;
+                    /* color: white; */
                 }
 
                 /* .logo {
@@ -1692,7 +1694,7 @@
                         <img src="assets/logo.png" alt="logo"
                             style="width:250px; height:100px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.15); object-fit:cover;">
                     </div>
-                    <h1 class="main-title" style="transform: translateY(10%);">برنامج المؤتمر</h1>
+                    <h1 class="main-title" style="transform: translateY(10%);">برنامج المنتدي</h1>
                     <p class="subtitle" style="transform: translateY(10%);">جدول أعمال المؤتمر السنوي للسياحة
                         العلاجية مع المواضيع والمتحدثين المميزين
                     </p>
@@ -2937,6 +2939,10 @@
                                 <input type="text" id="firstName" name="firstName" required>
                             </div>
                             <div class="form-group">
+                                <label for="lastName"> الإسم الأوسط <span class="required">*</span></label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="form-group">
                                 <label for="lastName">اسم العائلة <span class="required">*</span></label>
                                 <input type="text" id="lastName" name="lastName" required>
                             </div>
@@ -2961,6 +2967,10 @@
                             </div>
                             <div class="form-group">
                                 <label for="organization">اسم المؤسسة <span class="required">*</span></label>
+                                <input type="text" id="organization" name="organization" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="organization"> رقم جواز السفر  <span class="required">*</span></label>
                                 <input type="text" id="organization" name="organization" required>
                             </div>
                         </div>
@@ -4909,6 +4919,7 @@
     </footer>
 
     <script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         const mobileToggle = document.querySelector('.mobile-toggle');
@@ -4926,6 +4937,7 @@
                 content.style.display = content.style.display === 'flex' ? 'none' : 'flex';
             });
         });
+         AOS.init();
     </script>
 </body>
 
