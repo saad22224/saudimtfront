@@ -260,15 +260,37 @@ body {
         cursor: pointer;
     }
 
-    .mobile-menu {
-        display: none;
-        flex-direction: column;
-        background: #fff;
-        padding: 10px 20px;
-        border-top: 1px solid #eee;
-        height: calc(100vh - 60px);
-        overflow-y: auto;
-    }
+  .mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  background: #fff;
+  padding: 15px;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+/* Dropdown */
+.mobile-dropdown .dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown .dropdown-content a {
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.mobile-dropdown .dropdown-content.show {
+  max-height: 500px; /* يكفي للمحتوى */
+}
+
 
     .mobile-item {
         margin-bottom: 10px;
@@ -1371,6 +1393,7 @@ body {
         background: rgba(255, 255, 255, 0.95);
         margin-top: 10px;
         border-radius: 8px;
+
     }
 
     .hero-title {
