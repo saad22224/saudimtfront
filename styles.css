@@ -1,4 +1,8 @@
 /* Reset and Base Styles */
+
+html{
+    overflow-x: hidden !important;
+}
 * {
     margin: 0;
     padding: 0;
